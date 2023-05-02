@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.material-symbols-outlined {
+ font-variation-settings:
+         'FILL' 0,
+         'wght' 400,
+         'GRAD' 0,
+         'opsz' 48
+}
+.center {
+  padding-left: calc(50vw - 350px);
+  padding-right: calc(50vw - 350px);
+}
+.app {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__title {
+    text-align: center;
+    margin: 0 0 30px;
+  }
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 20px;
+    border: 1px solid cadetblue;
+    margin: 0 0 30px;
+  }
+  &__label {
+    text-align: center;
+    margin: 0 0 10px;
+    width: 100%;
+  }
+  &__field {
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  &__task {
+    display: grid;
+    grid-template-columns: 1fr 30px 30px 30px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e3e3e3;
+  }
+  &__btn,
+  &__edit,
+  &__remove,
+  &__done {
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    padding: 0 10px;
+    transition: .3s;
+    .material-symbols-outlined {
+      font-size: 20px;
+    }
+    &:hover {
+      opacity: .6;
+    }
+  }
+  &__edit {
+    background: darkgoldenrod;
+  }
+  &__remove {
+    background: tomato;
+  }
+  &__btn {
+    background: forestgreen;
+    height: 37px;
+  }
+  &__done {
+    border: 1px solid #000;
+    &.--done {
+      background: url("../img/done.svg") center / 75% no-repeat green;
+
+    }
+  }
+}
